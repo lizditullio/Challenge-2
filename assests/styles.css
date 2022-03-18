@@ -129,20 +129,57 @@ max-width: 200px;
     display: flex;
     flex-wrap: wrap;
     flex: 1;
-    }
+    justify-content: space-evenly;
+}
 
 .run-buddy {
-    background-image: url(../assests/images/run-buddy2.JPG);
+    position: relative; 
+    margin: 0;
+    padding: 0;
+    border: 5px solid var(--tertiary-color);
+}
+
+.run-buddy img {
+/* background-image: url(../assests/images/run-buddy2.JPG);
     background-size: cover;
     padding-top: 200px;
-    padding-bottom: 50px;
-    border: 5px solid var(--tertiary-color);
-    width: 100%;
-    min-width: 1500px;
+    padding-bottom: 50px; */
+    display: flex;
+    flex: 0 100%;
+    max-width: 100%;
 }
-  
 
 .calculator {
+    position: relative; 
+    margin: 0;
+    padding: 0;
+    border: 5px solid var(--tertiary-color);
+    flex: 1 50%;
+}
+
+
+.calculator img { 
+    display: flex;
+    max-width: 100%;
+     object-fit: cover;
+}
+
+.tetris {
+    position: relative; 
+    margin: 0;
+    padding: 0;
+    border: 5px solid var(--tertiary-color);
+    flex: 1 50%;
+}
+
+
+.tetris img { 
+    display: flex;
+    max-width: 100%;
+    object-fit: cover;
+}
+    
+    /*
     background-image: url(../assests/images/calculator.JPG);
     background-size: cover;
     padding-top: 200px;
@@ -159,14 +196,17 @@ max-width: 200px;
     padding-right: 500px;
     padding-bottom: 50px;
     border: 5px solid var(--tertiary-color);
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     
-}
+
 
 .work-header {
     background-color: var(--tertiary-color);
     color: black;
-}
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+  }
 
 .contact-info {
     display: flex;
@@ -201,8 +241,42 @@ max-width: 200px;
 
 /* MEDIA QUERIES FOR TABLETS AND SMALLER*/
 @media screen and (max-width: 768px) {  
-    .run-buddy {
+    .header {
         width: 100%;
-        padding-right: 0;
+    }
+   .section-title {
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+    .contact-info {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .contact-info address {
+        flex-wrap: wrap;
+        border-left: none;
+        justify-content: center;
+    }
+    .projects {
+        border-left: none;
+        
+    }
+    .headshot {
+        border-left: none;
+        max-width: 50%;
+    }
+    header nav ul li a {
+        font-size: 20px;
+    }
+}
+
+/* MEDIA QUERIES FOR MOBILE PHONES AND SMALLER*/
+@media screen and (max-width: 575px) {
+    .contact-info address {
+        font-size: 24px;
+        flex-direction: column;
+        text-align: center;
     }
 }
