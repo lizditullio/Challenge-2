@@ -15,6 +15,21 @@ body {
     font-family: Helvetica, Arial, sans-serif;
 }
 
+.section-header,
+.contact-header {
+font-size: 45px;
+flex: 1 100%;
+padding: 20px;
+text-align: center;
+max-width: 200px;
+}
+
+.section-title {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Header Styling Start */
 header {
     background-color: var(--tertiary-color);
     padding: 20px 35px;
@@ -68,7 +83,9 @@ header nav ul li a:hover {
     border-radius: 15px;
     text-shadow: none;
 }
+/* Header Styling End*/
 
+/*About Me Styling Start */
 #about-me {
 display: flex;
 width: 100%;
@@ -85,14 +102,6 @@ padding: 10px;
 border-left: 5px solid var(--secondary-color);
 }
 
-.section-header {
-font-size: 45px;
-flex: 1 100%;
-padding: 20px;
-text-align: center;
-max-width: 200px;
-}
-
 #about-me p {
     flex: 1 100%;
     flex-wrap: wrap;
@@ -101,7 +110,9 @@ max-width: 200px;
     font-size: 24px;
     line-height: 1.5;
   }
+  /*About Me Styling End */
 
+  /*Work Styling Start */
 #work {
   display: flex;
   width: 100%;
@@ -109,6 +120,14 @@ max-width: 200px;
   align-items: center;
   margin-bottom: 50px;
 }
+
+.work-header {
+    background-color: var(--tertiary-color);
+    color: black;
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+  }
 
 .projects {
     border-left: 5px solid var(--secondary-color);
@@ -140,10 +159,6 @@ max-width: 200px;
 }
 
 .run-buddy img {
-/* background-image: url(../assests/images/run-buddy2.JPG);
-    background-size: cover;
-    padding-top: 200px;
-    padding-bottom: 50px; */
     display: flex;
     flex: 0 100%;
     max-width: 100%;
@@ -154,80 +169,55 @@ max-width: 200px;
     margin: 0;
     padding: 0;
     border: 5px solid var(--tertiary-color);
-    flex: 1 50%;
+    flex: 0 50%;
 }
 
 
 .calculator img { 
     display: flex;
-    max-width: 100%;
+    max-width: 75%;
      object-fit: cover;
 }
 
 .tetris {
     position: relative; 
+    flex: 0 50%;
     margin: 0;
     padding: 0;
     border: 5px solid var(--tertiary-color);
-    flex: 1 50%;
 }
 
 
 .tetris img { 
     display: flex;
-    max-width: 100%;
+    max-width: 75%;
     object-fit: cover;
 }
-    
-    /*
-    background-image: url(../assests/images/calculator.JPG);
-    background-size: cover;
-    padding-top: 200px;
-    padding-right: 500px;
-    padding-bottom: 50px;
-    border: 5px solid var(--tertiary-color);
-    background-repeat: no-repeat;
-}
+ /*Work Styling End */
 
-.tetris {
-    background-image: url(../assests/images/tetris.JPG);
-    background-size: cover;
-    padding-top: 200px;
-    padding-right: 500px;
-    padding-bottom: 50px;
-    border: 5px solid var(--tertiary-color);
-    background-repeat: no-repeat; */
-    
-
-
-.work-header {
-    background-color: var(--tertiary-color);
-    color: black;
-    position: absolute;
-    bottom: 50px;
-    left: 0;
-  }
-
+ /*Contact Me Styling Start */
 .contact-info {
     display: flex;
     justify-content: space-between;
 }
-
 .contact-info address{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     line-height: 1.5;
     font-size: 32px;
     flex: 1 100%;
     padding: 10px;
     font-style: normal;
     text-decoration: none;
-    border-left: 5px solid var(--secondary-color);
-}
+} 
 
 .contact-info a {
     text-decoration: none;
     color: black;
+}
+.contact-border {
+    padding: 10px;
+    border-left: 5px solid var(--secondary-color);
 }
 
 .number p {
@@ -238,6 +228,15 @@ max-width: 200px;
 .number:hover p{
     display: contents;
 }
+
+.number {
+    margin-right: 200px;
+}
+
+.email {
+    margin-right: 200px;
+}
+ /*Contact Me Styling End */
 
 /* MEDIA QUERIES FOR TABLETS AND SMALLER*/
 @media screen and (max-width: 768px) {  
@@ -250,26 +249,52 @@ max-width: 200px;
         justify-content: center;
         width: 100%;
     }
-    .contact-info {
-        flex-direction: column;
-        flex-wrap: wrap;
+    .section-header,
+    .contact-header {
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        max-width: none;
+    }
+    
+    header nav ul li a {
+        font-size: 20px;
     }
     .contact-info address {
-        flex-wrap: wrap;
         border-left: none;
-        justify-content: center;
+        flex-wrap: wrap;
     }
     .projects {
-        border-left: none;
-        
+        border-left: none;   
     }
     .headshot {
         border-left: none;
         max-width: 50%;
     }
-    header nav ul li a {
-        font-size: 20px;
+    .number {
+        font-size: 24px;
     }
+    .email {
+        font-size: 24px;
+    }
+    .github {
+        font-size: 24px;
+    }
+
+    .number,
+    .email {
+        margin: 0px
+    }
+
+    .contact-border {
+        padding: 0px;
+        border-left: none;
+        padding-left: 5px;
+    }
+    .number:hover p{
+        display: none;
+    }
+    
 }
 
 /* MEDIA QUERIES FOR MOBILE PHONES AND SMALLER*/
@@ -278,5 +303,10 @@ max-width: 200px;
         font-size: 24px;
         flex-direction: column;
         text-align: center;
+    }
+    header nav ul li a {
+        font-size: 20px;
+        justify-content: space-between;
+        padding: 5px;
     }
 }
