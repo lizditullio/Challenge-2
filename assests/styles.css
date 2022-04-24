@@ -164,7 +164,7 @@ border-left: 5px solid var(--secondary-color);
     max-width: 100%;
 }
 
-.calculator {
+.searchParty {
     position: relative; 
     margin: 0;
     padding: 0;
@@ -173,7 +173,7 @@ border-left: 5px solid var(--secondary-color);
 }
 
 
-.calculator img { 
+.searchParty img { 
     display: flex;
     max-width: 75%;
      object-fit: cover;
