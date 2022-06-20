@@ -179,7 +179,7 @@ border-left: 5px solid var(--secondary-color);
      object-fit: cover;
 }
 
-.tetris {
+.bestReads {
     position: relative; 
     flex: 0 50%;
     margin: 0;
@@ -188,7 +188,7 @@ border-left: 5px solid var(--secondary-color);
 }
 
 
-.tetris img { 
+.bestReads img { 
     display: flex;
     max-width: 75%;
     object-fit: cover;
